@@ -6,7 +6,10 @@
             <ul class="list-inline meta">
                 <li><i class="fa fa-calendar"></i>{{ .Date.Format "January 2, 2006" }}</li>
                 <li><i class="fa fa-user"></i>{{ .Params.author }}</li>
-                <li><i class="fa fa-folder"></i>{{ range $index, $value := .Params.categories }}<a href="{{ "/categories/" | absURL }}{{ . | urlize }}">{{ $value }}</a>{{ if lt (add $index 1) $categoryCount }}, {{ end }}{{ end }}</li>
+                {{ if isset .Params "categories" }}
+                    {{ $categoryCount := .Params.categories | len }}
+                    <li><i class="fa fa-folder"></i>{{ range $index, $value := .Params.categories }}<a href="{{ "/categories/" | absURL }}{{ . | urlize }}">{{ $value }}</a>{{ if lt (add $index 1) $categoryCount }}, {{ end }}{{ end }}</li>
+                {{ end }}
             </ul>
         {{ end }}
         {{ partial "widgets/content/share.html" . }}

@@ -2,7 +2,7 @@
 
 A flat bootstrap theme for the Hugo static website engine.
 
-![Hugo Phlat Theme Screenshot](images/screenshot.png)
+![Hugo Phlat Theme Screenshot](https://raw.githubusercontent.com/nraboy/hugo-phlat-theme/master/images/screenshot.png)
 
 A functional sample of this theme can be seen in action via [Own the Web](https://www.owntheweb.net).
 

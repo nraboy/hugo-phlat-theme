@@ -44,7 +44,7 @@ This theme relies heavily on a well crafted `config.toml` file.  It will consist
 These parameters are required for the theme to compile and function correctly.
 
 ```toml
-baseurl = "http://replace-this-with-your-hugo-site.com/"
+baseurl = "https://www.example.com/"
 languageCode = "en-us"
 title = "Own the Web"
 

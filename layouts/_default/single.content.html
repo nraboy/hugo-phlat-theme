@@ -2,7 +2,6 @@
     <div class="col-md-12 content-card">
         <h1>{{ .Title }}</h1>
         {{ if eq .Type "post" }}
-            {{ $categoryCount := .Params.categories | len }}
             <ul class="list-inline meta">
                 <li><i class="fa fa-calendar"></i>{{ .Date.Format "January 2, 2006" }}</li>
                 <li><i class="fa fa-user"></i>{{ .Params.author }}</li>

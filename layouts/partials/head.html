@@ -13,7 +13,7 @@
         <meta name="alexaVerifyID" content="{{ . }}" />
     {{ end }}
     <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}" />
-    <meta name="keywords" content='{{ with .Params.tags }}{{ delimit . "," }}{{ else }}{{ delimit .Site.Params.keywords "," }}{{ end }}' />
+    <meta name="keywords" content='{{ with .Params.tags }}{{ delimit . "," }}{{ else }}{{ delimit (.Site.Params.keywords | default "") "," }}{{ end }}' />
     {{ with .Params.author }}
         <meta name="author" content="{{ . }}" />
     {{ end }}
